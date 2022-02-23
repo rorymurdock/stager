@@ -1,6 +1,7 @@
 # Stager
 
-![Stager]()
+![Stager](https://user-images.githubusercontent.com/9400108/155261207-ea565804-3781-4342-bea8-98d72a313575.gif)
+
 
 Stager is a GTK3 GUI for your Python functions to be used during enrolment.
 
