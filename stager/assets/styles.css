@@ -1,0 +1,25 @@
+.jumboji {
+    font-size: 60px;
+}
+
+.jumboji_xl {
+    font-size: 120px;
+}
+
+.hero_text {
+    font-size: 20px;
+}
+
+.task_name {
+    font-size: 14px;
+}
+
+.version {
+    color: lightgrey;
+}
+
+.terminal text {
+    color: white;
+    background-color: black;
+    font-family: monospace;
+}

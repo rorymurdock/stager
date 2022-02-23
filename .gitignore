@@ -1,0 +1,11 @@
+.DS_Store
+.devcontainer
+.coverage
+__pycache__
+*.ui~
+dist/
+build/
+*secret*
+*.log
+*.iso
+\#*.ui#

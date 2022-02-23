@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.22"/>
+  <object class="GtkWindow" id="window">
+    <property name="width-request">640</property>
+    <property name="height-request">550</property>
+    <property name="can-focus">False</property>
+    <property name="has-focus">True</property>
+    <property name="title" translatable="yes">Stager</property>
+    <property name="resizable">False</property>
+    <property name="window-position">center-always</property>
+    <property name="default-width">640</property>
+    <property name="default-height">500</property>
+    <property name="skip-taskbar-hint">False</property>
+    <property name="urgency-hint">True</property>
+    <property name="decorated">False</property>
+    <property name="deletable">False</property>
+    <property name="gravity">center</property>
+    <signal name="destroy" handler="close" swapped="no"/>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">20</property>
+        <child>
+          <object class="GtkBox" id="logo_box">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="margin-top">25</property>
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkImage" id="hero_logo">
+                <property name="width-request">32</property>
+                <property name="height-request">32</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="hexpand">False</property>
+                <property name="vexpand">False</property>
+                <property name="pixbuf">../assets/logo.png</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="hero_text">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">Staging</property>
+                <style>
+                  <class name="hero_text"/>
+                </style>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStack" id="stack">
+            <property name="height-request">300</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="vexpand">True</property>
+            <property name="transition-duration">500</property>
+            <property name="transition-type">slide-left</property>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="version">
+            <property name="height-request">30</property>
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="no-show-all">True</property>
+            <property name="halign">end</property>
+            <property name="valign">start</property>
+            <property name="label" translatable="yes">v1.0.0</property>
+            <property name="width-chars">10</property>
+            <property name="single-line-mode">True</property>
+            <style>
+              <class name="version"/>
+            </style>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.22"/>
+  <object class="GtkStack" id="username_input">
+    <property name="width-request">450</property>
+    <property name="height-request">300</property>
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="halign">center</property>
+        <property name="hexpand">True</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">15</property>
+        <child>
+          <object class="GtkBox" id="user_info_box">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <property name="no-show-all">True</property>
+            <property name="valign">center</property>
+            <property name="vexpand">True</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">5</property>
+            <child>
+              <object class="GtkBox" id="username_text_row">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkImage" id="user_icon">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <property name="icon-name">user-info</property>
+                    <property name="icon_size">5</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="user_text">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <property name="margin-top">4</property>
+                    <property name="hexpand">False</property>
+                    <property name="label" translatable="yes">Enter a username and password for your new local account</property>
+                    <property name="wrap">True</property>
+                    <property name="width-chars">32</property>
+                    <property name="max-width-chars">32</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="username_entry_row">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkEntry" id="username_entry">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="margin-right">5</property>
+                    <property name="hexpand">False</property>
+                    <property name="max-length">32</property>
+                    <property name="width-chars">32</property>
+                    <property name="truncate-multiline">True</property>
+                    <property name="caps-lock-warning">False</property>
+                    <property name="placeholder-text" translatable="yes">Username</property>
+                    <property name="input-purpose">email</property>
+                    <signal name="changed" handler="validate_username_changed" swapped="no"/>
+                    <signal name="changed" handler="z_refresh_next_button_state" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage" id="username_status_icon">
+                    <property name="width-request">20</property>
+                    <property name="height-request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <property name="icon-name">emblem-default</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="password_entry_row">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkEntry" id="password_entry">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="margin-right">5</property>
+                    <property name="hexpand">False</property>
+                    <property name="visibility">False</property>
+                    <property name="invisible-char">•</property>
+                    <property name="width-chars">32</property>
+                    <property name="truncate-multiline">True</property>
+                    <property name="secondary-icon-stock">gtk-dialog-authentication</property>
+                    <property name="placeholder-text" translatable="yes">Password</property>
+                    <property name="input-purpose">password</property>
+                    <signal name="changed" handler="validate_password_changed" swapped="no"/>
+                    <signal name="changed" handler="validate_password_match_changed" swapped="no"/>
+                    <signal name="changed" handler="z_refresh_next_button_state" swapped="no"/>
+                    <signal name="icon-press" handler="toggle_password_visibility_pressed" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage" id="password_entry_icon">
+                    <property name="width-request">20</property>
+                    <property name="height-request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <property name="icon-name">emblem-default</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="password_entry_confirm_row">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkEntry" id="password_entry_confirm">
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="hexpand">False</property>
+                    <property name="visibility">False</property>
+                    <property name="invisible-char">•</property>
+                    <property name="width-chars">32</property>
+                    <property name="truncate-multiline">True</property>
+                    <property name="secondary-icon-stock">gtk-dialog-authentication</property>
+                    <property name="placeholder-text" translatable="yes">Confirm Password</property>
+                    <property name="input-purpose">password</property>
+                    <signal name="changed" handler="update_password_match_changed" swapped="no"/>
+                    <signal name="changed" handler="validate_password_match_changed" swapped="no"/>
+                    <signal name="changed" handler="z_refresh_next_button_state" swapped="no"/>
+                    <signal name="icon-press" handler="toggle_password_visibility_pressed" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkImage" id="password_entry_confirm_icon">
+                    <property name="width-request">20</property>
+                    <property name="height-request">20</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">center</property>
+                    <property name="valign">center</property>
+                    <property name="margin-left">5</property>
+                    <property name="icon-name">emblem-important</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="password_strength_level">
+                <property name="name">crypt_key_strength_box</property>
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="password_strength">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="label" translatable="yes">Password Strength </property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLevelBar" id="password_key_strength_level">
+                    <property name="width-request">80</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="hexpand">True</property>
+                    <property name="max-value">100</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="username_next_button">
+            <property name="label">Next</property>
+            <property name="visible">True</property>
+            <property name="sensitive">False</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="halign">center</property>
+            <property name="valign">end</property>
+            <property name="vexpand">True</property>
+            <property name="image-position">right</property>
+            <signal name="clicked" handler="next_button_clicked" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+      </object>
+      <packing>
+        <property name="name">page0</property>
+        <property name="title" translatable="yes">page0</property>
+      </packing>
+    </child>
+  </object>
+</interface>

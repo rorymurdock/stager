@@ -1,0 +1,4 @@
+include LICENSE
+recursive-include stager/assets/ *
+recursive-include stager/dialogs/ *
+recursive-include stager/pages/ *

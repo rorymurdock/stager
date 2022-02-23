@@ -1,0 +1,92 @@
+{
+    "hero_text": "Client Platform Engineering",
+    "logo_height": 100,
+    "logo_width": 256,
+    "dry_run": true,
+    "asset_location": "stager/assets/",
+    "tasks": {
+        "os_check": {
+            "name": "Check OS version",
+            "icon_name": "user-desktop",
+            "function": "cpe_stage.utils.os_check()",
+            "halt_on_error": true,
+            "error_message": "Unfortunately you're not running a supported OS version only Ubuntu 20.04 LTS and higher is supported"
+        },
+        "check_network_connection": {
+            "name": "Check network connectivity",
+            "icon_name": "emblem-shared",
+            "function": "cpe_stage.utils.check_network_connection()",
+            "halt_on_error": true,
+            "error_message": "📡 Please check your internet connection"
+        },
+        "apt_update": {
+            "name": "Apt Update",
+            "icon_name": "system-software-update",
+            "function": "cpe_stage.utils.apt_update()",
+            "error_message": "Unable to update the software catalogs"
+        },
+        "group_create": {
+            "name": "Creating a new group",
+            "icon_name": "system-users",
+            "function": "cpe_stage.users.create_group_if_does_not_exist()",
+            "halt_on_error": true,
+            "error_message":"Unable to create the new user group"
+        },
+        "user_create": {
+            "name": "Creating a new user",
+            "icon_name": "user-home",
+            "function": "cpe_stage.users.create_if_does_not_exist(username, password)",
+            "halt_on_error": true,
+            "error_message":"Unable to create the new user"
+        },
+        "set_hostname": {
+            "name": "Setting hostname",
+            "icon_name": "computer",
+            "function": "cpe_stage.utils.set_hostname(username)",
+            "halt_on_error": true,
+            "error_message":"Unable to set the new hostname"
+        },
+        "encrypt_device": {
+            "name": "Encrypting device",
+            "icon_name": "network-wireless-encrypted",
+            "function": "cpe_stage.utils.add_disk_key(crypt_key)",
+            "halt_on_error": true,
+            "error_message":"Unable to encrypt your device"
+        },
+        "install_ssh": {
+            "name": "Installing SSH",
+            "icon_name": "utilities-terminal",
+            "function": "cpe_stage.install.ssh()",
+            "error_message":"Unable to install SSH"
+        },
+        "install_vscode": {
+            "name": "Installing VSCode",
+            "icon": "tasks/vscode.png",
+            "function": "cpe_stage.install.vscode()",
+            "error_message":"Unable to install VSCode"
+        },
+        "install_glade": {
+            "name": "Installing Glade",
+            "icon": "tasks/glade.png",
+            "function": "cpe_stage.install.glade()",
+            "error_message":"Unable to install Glade"
+        },
+        "clone_git_repo": {
+            "name": "Clone Stager repo",
+            "icon": "tasks/github.png",
+            "function": "cpe_stage.utils.clone_repo(username)"
+        },
+        "copy_shortcut": {
+            "name": "Copying next steps guide",
+            "icon_name": "folder-download",
+            "function": "True",
+            "function_skip": "cpe_stage.utils.copy_next_steps()"
+        },
+        "ship_logs": {
+            "hidden": true,
+            "name": "Shipping logs",
+            "icon_name": "mail-send",
+            "function": "cpe_stage.utils.send_logs()"
+        }
+    }
+}
