@@ -93,7 +93,7 @@ def start_staging():
 
             stager.pages.error.MESSAGE = config_item.error_message
             stager.utils.navigator.change_page(NAME, ERROR_PAGE_ID)
-            break
+            return
 
         logger.info("Task #%s done", task_number)
 
