@@ -79,7 +79,7 @@
                     <property name="invisible-char">•</property>
                     <property name="width-chars">32</property>
                     <property name="truncate-multiline">True</property>
-                    <property name="secondary-icon-stock">gtk-dialog-authentication</property>
+                    <property name="secondary-icon-name">dialog-password</property>
                     <property name="placeholder-text" translatable="yes">Password</property>
                     <property name="input-purpose">password</property>
                     <signal name="changed" handler="validate_crypt_key_changed" swapped="no"/>
@@ -129,7 +129,7 @@
                     <property name="invisible-char">•</property>
                     <property name="width-chars">32</property>
                     <property name="truncate-multiline">True</property>
-                    <property name="secondary-icon-stock">gtk-dialog-authentication</property>
+                    <property name="secondary-icon-name">dialog-password</property>
                     <property name="placeholder-text" translatable="yes">Confirm Password</property>
                     <property name="input-purpose">password</property>
                     <signal name="changed" handler="update_crypt_key_match_changed" swapped="no"/>
