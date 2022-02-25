@@ -1,6 +1,8 @@
 """Tasks module"""
 import time
 import logging
+# Used in exec
+import importlib # pylint: disable=unused-import
 
 import gi  # pylint: disable=wrong-import-position
 
