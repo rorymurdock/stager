@@ -4,6 +4,7 @@ import logging
 import threading
 
 import stager.utils
+import stager.utils.reboot
 from stager.utils.constants import APPLICATION_NAME, FINISHED_PAGE_ID
 from stager.utils.constants import FINISHED_TEXT_EMOJI_ID, FINISHED_TEXT_TOP_ID
 from stager.utils.constants import FINISHED_BUTTON_ID, FINISHED_TEXT_BOTTOM_ID

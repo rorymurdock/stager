@@ -5,7 +5,7 @@ gi.require_version("Gtk", "3.0")  # pylint: disable=wrong-import-position
 from gi.repository import Gtk  # pylint: disable=wrong-import-position
 
 ## Application information ##
-APPLICATION_VERSION = "1.1.7"
+APPLICATION_VERSION = "1.1.9"
 APPLICATION_NAME = "Stager"
 
 ## Application settings ##
