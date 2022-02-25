@@ -38,6 +38,23 @@ def run(task_number, config_item, queue, message_queue, error_queue):
         logger.warning("Dry run enabled, function returns %s", result)
         time.sleep(0.5)
     else:
+        # Load the modules into this functions namespace
+        # TODO try moving into stager.utils.load.module()
+        # Add something like stager.imported_mod.{module}
+        for module in stager.utils.CONFIG.import_modules:
+            logger.info("Importing module %s", module)
+            try:
+                exec(
+                    f'{module} = importlib.import_module("{module}")', globals(), globals()
+                )
+                logger.info("Module %s imported", module)
+            except (NameError, ModuleNotFoundError) as exception:
+                logger.critical("Unable to import %s", module)
+                stager.utils.dialog.error(
+                    f"{exception}",
+                    f"Unable to import {module} "
+                    "please check your installed python packages.",
+                )
         try:
             logger.debug("Running function %s", config_item.function)
             result = eval(config_item.function) # pylint: disable=eval-used
